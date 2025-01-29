@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="Test_word">I'm OBJN</h1>
+<script>
+    const colors = ["red", "blue", "green", "yellow", "purple"];
+    let currentIndex = 0;
+
+    function changeColor() {
+        document.getElementById("Test_word").style.color = colors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+    }
+
+    setInterval(changeColor, 100);
+    changeColor(); // Initial call to set the first color
+</script>
+</body>
+</html>
